@@ -1,3 +1,23 @@
 {
-  "employee": []
+  "employee": [
+    {
+      "id": 1,
+      "name": "Jai Shankar",
+      "email": "jaishankar@gamil.com",
+      "phone": "9900223311"
+    },
+    {
+      "name": "Aravind Kumar M",
+      "email": "aravindkumarru@gmail.com",
+      "phone": "09901920652",
+      "active": true,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Seema",
+      "email": "oreobabe@gmail.com",
+      "phone": "9901920652"
+    }
+  ]
 }

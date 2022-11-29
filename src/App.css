@@ -1,3 +1,17 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: linear-gradient(
+    to right,
+    rgb(229, 221, 229),
+    rgb(232, 232, 243)
+  );
+}
+
 .App {
   text-align: center;
 }
@@ -6,10 +20,10 @@
   height: 40vmin;
   pointer-events: none;
 }
-.btn{
-  margin: 2px;;
+.btn {
+  margin: 2px;
 }
-.divbtn{
+.divbtn {
   float: left;
 }
 
@@ -41,4 +55,22 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header2 {
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to bottom left, #553c9a, #ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.crud-head {
+  font-size: 30px;
+  font-weight: 600;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #553c9a 45%, #ee4b2b);
 }

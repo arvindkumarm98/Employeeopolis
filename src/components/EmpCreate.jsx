@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const EmpCreate = () => {
   const [id, setId] = useState("");
@@ -8,11 +8,27 @@ const EmpCreate = () => {
   const [phone, setPhone] = useState("");
   const [active, setActive] = useState(true);
 
-  const handleSubmit = (e)=>{
-e.preventDefault();
-console.log({id,name,email,phone});
+  const navigate = useNavigate();
 
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const empdata = { name, email, phone, active };
+
+    fetch("http://localhost:8000/employee", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(empdata),
+    })
+      .then((res) => {
+        alert("Saved successfully.");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
   return (
     <div>
       <div className="row">
@@ -20,7 +36,7 @@ console.log({id,name,email,phone});
           <form className="container" onSubmit={handleSubmit}>
             <div className="card" style={{ textAlign: "left" }}>
               <div className="card-title">
-                <h2>Employee Create</h2>
+                <h2 className="create-header">Employee Create</h2>
               </div>
 
               <div className="row">

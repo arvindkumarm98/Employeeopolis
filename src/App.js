@@ -7,7 +7,7 @@ import EmpEdit from "./components/EmpEdit";
 function App() {
   return (
     <div className="App">
-      <h1>React JS CRUD Operations</h1>
+      <h1 className="crud-head">REACT CRUD OPERATIONS</h1>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Emplisting />} />
